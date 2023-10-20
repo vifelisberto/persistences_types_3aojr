@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:persistences_types_3aojr/floor/database/app_database.dart';
+import 'package:persistences_types_3aojr/floor/models/book.dart';
 import 'package:persistences_types_3aojr/utils/constants.dart';
 
 class BookAddWidget extends StatelessWidget {
@@ -49,9 +51,16 @@ class BookAddWidget extends StatelessWidget {
                   padding: paddingButton,
                   child: ElevatedButton(
                     child: buttonLabel,
-                    onPressed: () {
-                      if(_formKey.currentState!.validate()){
+                    onPressed: () async {
+                      if (_formKey.currentState!.validate()) {
+                        final database = await $FloorAppDatabase
+                            .databaseBuilder('app_database.db')
+                            .build();
+                        final dao = database.bookingDao;
 
+                        final book = Book(_nameController.text, _authorController.text, null);
+                        await dao.insertBook(book);
+                        Navigator.pop(context);
                       }
                     },
                   ))
