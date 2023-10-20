@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:persistences_types_3aojr/utils/constants.dart';
 
-class BookAddWidget extends StatelessWidget {
-  BookAddWidget({super.key});
+class CarAddWidget extends StatelessWidget {
+  CarAddWidget({super.key});
 
-  final title = const Text("Novo livro");
+  final title = const Text("Novo carro");
   final _formKey = GlobalKey<FormState>();
-  final _nameController = TextEditingController();
-  final _nameDecoration = const InputDecoration(
-      hintText: "Nome do livro", labelText: "Nome do livro");
-  final _authorController = TextEditingController();
-  final _authorDecoration = const InputDecoration(
-      hintText: "Autor do livro", labelText: "Autor do livro");
+  final _brandController = TextEditingController();
+  final _brandDecoration = const InputDecoration(
+      hintText: "Marca do carro", labelText: "Marca do carro");
+  final _modelController = TextEditingController();
+  final _modelDecoration = const InputDecoration(
+      hintText: "Modelo do carro", labelText: "Modelo do carro");
 
   @override
   Widget build(BuildContext context) {
@@ -26,21 +26,21 @@ class BookAddWidget extends StatelessWidget {
             key: _formKey,
             child: Column(children: [
               TextFormField(
-                decoration: _nameDecoration,
-                controller: _nameController,
+                decoration: _brandDecoration,
+                controller: _brandController,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return "Nome do livro inválido";
+                    return "Marca do carro inválido";
                   }
                   return null;
                 },
               ),
               TextFormField(
-                decoration: _authorDecoration,
-                controller: _authorController,
+                decoration: _modelDecoration,
+                controller: _modelController,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return "Autor do livro inválido";
+                    return "Modelo do carro inválido";
                   }
                   return null;
                 },
@@ -51,7 +51,7 @@ class BookAddWidget extends StatelessWidget {
                     child: buttonLabel,
                     onPressed: () {
                       if(_formKey.currentState!.validate()){
-
+                        
                       }
                     },
                   ))

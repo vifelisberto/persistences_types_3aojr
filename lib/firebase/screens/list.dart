@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:persistences_types_3aojr/floor/models/book.dart';
-import 'package:persistences_types_3aojr/floor/screens/add.dart';
+import 'package:persistences_types_3aojr/firebase/models/car.dart';
+import 'package:persistences_types_3aojr/firebase/screens/add.dart';
 import 'package:persistences_types_3aojr/utils/constants.dart';
 
-class BooksListWidget extends StatefulWidget {
-  const BooksListWidget({super.key});
+class CarsListWidget extends StatefulWidget {
+  const CarsListWidget({super.key});
 
   @override
-  State<BooksListWidget> createState() => _BooksListWidgetState();
+  State<CarsListWidget> createState() => _CarsListWidgetState();
 }
 
-class _BooksListWidgetState extends State<BooksListWidget> {
-  final List<Book> books = [
-    Book("Livro 1", "Autor 1"),
-    Book("Livro 2", "Autor 2"),
+class _CarsListWidgetState extends State<CarsListWidget> {
+  final List<Car> books = [
+    Car("Carro 1", "Autor 1"),
+    Car("Carro 2", "Autor 2"),
   ];
 
-  final title = const Text("Livros");
-  final addWidget = BookAddWidget();
+  final title = const Text("Carros");
+  final addWidget = CarAddWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -39,14 +39,14 @@ class _BooksListWidgetState extends State<BooksListWidget> {
   }
 
   Widget _buildItem(index) {
-    Book book = books[index];
+    Car book = books[index];
     return Padding(
         padding: padding,
         child: Card(
           child: ListTile(
             leading: Text(book.id != null ? book.id!.toString() : ""),
-            title: Text(book.name),
-            subtitle: Text(book.author),
+            title: Text(book.brand),
+            subtitle: Text(book.model),
           ),
         ));
   }

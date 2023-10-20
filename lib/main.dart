@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:persistences_types_3aojr/firebase/screens/list.dart';
 import 'package:persistences_types_3aojr/floor/screens/list.dart';
 import 'package:persistences_types_3aojr/screens/principal.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/" : (context) => PrincipalWidget(),
         "/books" : (context) => BooksListWidget(),
+        "/cars" : (context) => CarsListWidget(),
       },
       initialRoute: "/",
     );

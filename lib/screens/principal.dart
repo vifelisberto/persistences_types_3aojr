@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:persistences_types_3aojr/types/menu.dart';
+import 'package:persistences_types_3aojr/utils/constants.dart';
 
 class PrincipalWidget extends StatelessWidget {
   PrincipalWidget({super.key});
@@ -10,12 +11,7 @@ class PrincipalWidget extends StatelessWidget {
   ];
 
   final title = const Text("Flutter - Persistência");
-  final nextIcon = const Icon(Icons.navigate_next);
-  final divider = const Divider(
-            height: 2,
-            color: Colors.black12,
-          );
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
