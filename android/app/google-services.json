@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "829407618312",
+    "project_id": "aojr-cloudfirestore",
+    "storage_bucket": "aojr-cloudfirestore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829407618312:android:59babc91b0cf8e722cb8bd",
+        "android_client_info": {
+          "package_name": "com.example.persistences_types_3aojr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBx4r-xP8oChpebA37xDh8nFb9l9yOtJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
